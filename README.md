@@ -38,3 +38,17 @@ This project will guide you through building a full-stack e-commerce web applica
 -  Adding optional extensions for improving development efficiency.
 -  Built a styled Login Page for the frontend.
 
+## Milestone 3: Backend Setup and Database Integration  
+ 
+-  **Created folders:**  config,controller,db,middleware,model,utils.
+-  Created .env in config, which is used to store environmental variables in a node.js application.
+
+- Made an Errorhandler.js in utils
+
+-  Created auth.js, catchAsyncErrors.js, error.js in middlewares
+
+- **MongoDB Connection:** Configure Mongoose, store credentials in `.env`.  
+
+-  Set up server.js and App.js in the backend folder.
+
+- In db made Database.js which is responsible for connecting your backend to MongoDB using Mongoose.
