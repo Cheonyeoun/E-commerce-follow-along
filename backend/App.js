@@ -1,18 +1,20 @@
 const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const userRoutes = require("./Routes/userRoutes");
+const errorMiddleware = require("./middleware/error");
+
 const app = express();
-const ErrorHandler = require("./utils/ErrorHandler");
 
-// Config
-if (process.env.NODE_ENV !== "PRODUCTION") {
-    require("dotenv").config({
-        path: "backend/config/.env"
-    });
-}
+// Middleware
+app.use(cors());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Database Connection
-const connectDatabase = require('./db/Database');
-connectDatabase();
+// Routes
+app.use("/api", userRoutes);
 
-app.use(ErrorHandler);
+// Error Handling Middleware
+app.use(errorMiddleware);
 
 module.exports = app;
