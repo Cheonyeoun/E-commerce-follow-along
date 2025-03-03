@@ -52,3 +52,16 @@ This project will guide you through building a full-stack e-commerce web applica
 -  Set up server.js and App.js in the backend folder.
 
 - In db made Database.js which is responsible for connecting your backend to MongoDB using Mongoose.
+
+## Milesstone 4: User Management and File Uploads with Multer
+
+- **Created a User Model:** Defined user schema with required fields.  
+- **Developed User Controllers:**  
+  - `createUser`: Handles user registration and saves user data.  
+  - `getUsers`: Retrieves all registered users.  
+- **Set Up Multer for File Uploads:** Configured middleware to handle image uploads.  
+- **Created Routes for User Management:**  
+  - `POST /users`: Register a new user with profile image upload.  
+  - `GET /users`: Fetch all users from the database.  
+- **Updated Error Handling:** Improved error handling with `ErrorHandler` and `catchAsyncErrors`.  
+- **Tested Endpoints:** Verified functionality using Postman.  
